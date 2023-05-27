@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package dns;
+
+service Resolver {
+    rpc Resolve(Request) returns (Response) {}
+}
+
+message Request {
+    string domain = 1;      // domain (host) to be resolved e.g. abc.com, xyz.info
+}
+
+message Response {
+    enum Status {
+        RESOLVED = 0;
+        UNRESOLVED= 1;
+    }
+
+    Status status = 1;
+    string ip = 2;          // `ip` should only be valid if `status = RESOLVED`
+}
