@@ -2,8 +2,10 @@ syntax = "proto3";
 
 package dns;
 
+option go_package = ".;dns";
+
 service Resolver {
-    rpc Resolve(Request) returns (Response) {}
+    rpc Resolve (Request) returns (Response) {}
 }
 
 message Request {
