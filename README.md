@@ -1,5 +1,7 @@
 # go-grpc-test
 
+[![CI](https://github.com/iamazeem/go-grpc-test/actions/workflows/ci.yml/badge.svg)](https://github.com/iamazeem/go-grpc-test/actions/workflows/ci.yml)
+
 Go [GRPC](https://grpc.io/) Test
 
 - sample DNS client and server apps
