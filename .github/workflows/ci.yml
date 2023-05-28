@@ -25,5 +25,5 @@ jobs:
         run: |
           ./dns-server &
           sleep 1
-          IP=$(./dns-client -dmain "domain.xyz")
+          IP=$(./dns-client --domain "domain.xyz")
           [[ $IP == "192.168.0.0" ]]
