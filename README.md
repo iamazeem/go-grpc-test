@@ -4,6 +4,8 @@ Go [GRPC](https://grpc.io/) Test
 
 - sample DNS client and server apps
 
+See [dns/dns.proto](dns/dns.proto) for request and response.
+
 ## Set up
 
 - Install protocol buffers compiler (`protoc`)
