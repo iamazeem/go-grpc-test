@@ -8,6 +8,21 @@ Go [GRPC](https://grpc.io/) Test
 
 See [dns/dns.proto](dns/dns.proto) for request and response.
 
+## Overview Diagram
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant client
+    participant server
+    client->>server: request (domain)
+    activate server
+    note right of server: check domain in cache
+    server->>client: response (status, ip)
+    deactivate server
+    note left of client: use ip if status = RESOLVED
+```
+
 ## Set up
 
 - Install protocol buffers compiler (`protoc`)
